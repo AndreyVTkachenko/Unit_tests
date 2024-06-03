@@ -10,11 +10,12 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/assertj-core-3.26.0-javadoc.jar!/" />
+          <root url="jar://$MODULE_DIR$/assertj-core-3.23.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="assertj-core-3.23.1" level="project" />
   </component>
 </module>
