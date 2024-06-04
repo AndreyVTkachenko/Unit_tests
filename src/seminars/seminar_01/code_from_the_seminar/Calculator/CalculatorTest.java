@@ -1,7 +1,6 @@
 package seminars.seminar_01.code_from_the_seminar.Calculator;
 
-import seminars.first.Calculator.Calculator;
-
+import seminars.seminar_01.code_from_the_seminar.Calculator.Calculator;
 import static org.assertj.core.api.Assertions.*;
 
 public class CalculatorTest {
