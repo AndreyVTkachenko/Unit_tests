@@ -20,7 +20,7 @@ public class Calculator {
         return operation;
     }
 
-    public static int getOperand() {
+    public static int getOperandOld() {
         System.out.println("Введите число: ");
         int operand;
         if (SCANNER.hasNextInt()) {
@@ -35,6 +35,18 @@ public class Calculator {
             }
         }
         return operand;
+    }
+
+    public static int getOperand() {
+        System.out.println("Введите число: ");
+        while (true) {
+            if (SCANNER.hasNextInt()) {
+                return SCANNER.nextInt();
+            } else {
+                System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз");
+                SCANNER.next();
+            }
+        }
     }
 
     public static int calculation(int firstOperand, int secondOperand, char operator) {

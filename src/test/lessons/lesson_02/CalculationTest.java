@@ -1,5 +1,7 @@
 package lessons.lesson_02;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import main.java.lessons.lesson_02.Calculator;
 
@@ -12,6 +14,34 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CalculationTest {
+
+    private final InputStream ORIGINAL_IN = System.in;
+    private final PrintStream ORIGINAL_OUT = System.out;
+    private ByteArrayInputStream TEST_IN;
+    private ByteArrayOutputStream TEST_OUT;
+
+    @BeforeEach
+    void setUpStreams() {
+        TEST_OUT = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(TEST_OUT));
+    }
+
+    @AfterEach
+    void restoreStreams() {
+        System.setIn(ORIGINAL_IN);
+        System.setOut(ORIGINAL_OUT);
+    }
+
+    private void provideInput(String data) {
+        TEST_IN = new ByteArrayInputStream(data.getBytes());
+        System.setIn(TEST_IN);
+    }
+
+    private String getOutput() {
+        return TEST_OUT.toString();
+    }
+
+
     @Test
     void additionExpressionEvaluation() {
         Calculator calculator = new Calculator();
@@ -44,6 +74,7 @@ public class CalculationTest {
                 .isInstanceOf(IllegalStateException.class);
     }
 
+    /*
     @Test
     void getOperandCompletesCorrectlyWithNumbers() {
         String testedValue = "9"; // Значение для тестов
@@ -71,5 +102,20 @@ public class CalculationTest {
                         System.setIn(inputStream);
         System.setOut(null);
     }
-}
+    */
 
+    @Test
+    void getOperandCompletesCorrectlyWithNumbers() {
+        provideInput("9\n");
+        int operand = Calculator.getOperand();
+        assertThat(operand).isEqualTo(9);
+    }
+
+    @Test
+    void getOperandCompletesCorrectlyWithNotNumbers() {
+        provideInput("k\n");
+        assertThatThrownBy(Calculator::getOperand)
+                .isInstanceOf(IllegalStateException.class)
+                .hasMessageContaining("Ошибка в вводимых данных");
+    }
+}
