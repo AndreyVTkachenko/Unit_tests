@@ -4,8 +4,8 @@ import main.java.seminars.seminar_02.Cart;
 import main.java.seminars.seminar_02.Product;
 import main.java.seminars.seminar_02.Shop;
 import org.junit.jupiter.api.*;
-//import org.junit.jupiter.params.ParameterizedTest;
-//import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,13 +41,16 @@ class ShopTest {
 
     private ByteArrayOutputStream output = new ByteArrayOutputStream();
 
-    // private Shop shop;
-    // private Cart cart;
-    //  @BeforeEach
-    //  void setup() {
-    //      shop = new Shop(getStoreItems());
-    //      cart = new Cart(shop);
-    //  }
+    /*
+     private Shop shop;
+     private Cart cart;
+      @BeforeEach
+      void setup() {
+          shop = new Shop(getStoreItems());
+          cart = new Cart(shop);
+      }
+      При активации этой части можно удалить инициализацию в каждом тесте -> Arrange (Подготовка)
+     */
 
 
 /*
@@ -236,8 +240,8 @@ class ShopTest {
      * *Сделать тест параметризованным
      */
 
-//        @ParameterizedTest
-//        @ValueSource(ints = {-100, 100})
+        @ParameterizedTest
+        @ValueSource(ints = {-100, 100})
     void incorrectProductSelectionCausesException(int i) {
         // Arrange (Подготовка)
         Shop shop = new Shop(getStoreItems());
@@ -288,10 +292,16 @@ class ShopTest {
     //          Shop shop = new Shop(getStoreItems());
     //          Cart cart = new Cart(shop);
     //      }
-
     @Test
     void testSUM() {
-
+        // Arrange (Подготовка)
+        Shop shop = new Shop(getStoreItems());
+        Cart cart = new Cart(shop);
+        // Act (Выполнение)
+        cart.addProductToCartByID(2); // 250
+        cart.addProductToCartByID(2); // 250
+        // Assert (Проверка утверждения)
+        assertThat(cart.getTotalPrice()).isEqualTo(500);
     }
 
     /**
@@ -301,6 +311,18 @@ class ShopTest {
      * <br> 3. Установлен таймаут на выполнение теста 70 Миллисекунд (unit = TimeUnit.MILLISECONDS)
      * <br> 4. После проверки работоспособности теста, его нужно выключить
      */
-
-   // ...
+    @DisplayName("Advanced test for calculating TotalPrice")
+    @RepeatedTest(10)
+    @Timeout(value = 700, unit = TimeUnit.MILLISECONDS)
+    @Disabled
+    void priceCartIsCorrectedCalculatedExt() {
+        // Arrange (Подготовка)
+        Shop shop = new Shop(getStoreItems());
+        Cart cart = new Cart(shop);
+        // Act (Выполнение)
+        cart.addProductToCartByID(1);
+        cart.removeProductByID(1);
+        // Assert (Проверка утверждения)
+        assertThat(cart.getTotalPrice()).isEqualTo(0);
+    }
 }
