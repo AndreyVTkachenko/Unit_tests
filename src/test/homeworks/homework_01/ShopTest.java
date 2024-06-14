@@ -2,16 +2,17 @@ package homeworks.homework_01;
 
 import main.java.homeworks.homework_01.Task_02.Product;
 import main.java.homeworks.homework_01.Task_02.Shop;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.List;
 
-public class ShopTest {
+class ShopTest {
     private Shop shop;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         shop = new Shop();
         shop.addProduct(new Product("Первый", 10.0));

@@ -1,7 +1,7 @@
 package homeworks.homework_01;
 
 import main.java.homeworks.homework_01.Task_01.Calculator;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class CalculatorTest {
