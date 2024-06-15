@@ -137,11 +137,11 @@ public class SomeServiceTest {
      */
     @Test
     void luckySumReturnSumWithout13() {
-        assertThat(this.someService.luckySum(2, 3, 13)).isEqualTo(5);
-        assertThat(this.someService.luckySum(2, 13, 9)).isEqualTo(11);
-        assertThat(this.someService.luckySum(13, 9, 9)).isEqualTo(18);
-        assertThat(this.someService.luckySum(9, 9, 9)).isEqualTo(27);
-        assertThat(this.someService.luckySum(13, 13, 13)).isEqualTo(0);
+        assertThat(SomeService.luckySum(2, 3, 13)).isEqualTo(5);
+        assertThat(SomeService.luckySum(2, 13, 9)).isEqualTo(11);
+        assertThat(SomeService.luckySum(13, 9, 9)).isEqualTo(18);
+        assertThat(SomeService.luckySum(9, 9, 9)).isEqualTo(27);
+        assertThat(SomeService.luckySum(13, 13, 13)).isEqualTo(0);
     }
 
 
