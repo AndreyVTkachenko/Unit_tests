@@ -21,4 +21,23 @@ public class Main {
              - проверить, что в режиме парковки (сначала testDrive, потом park, т.е эмуляция движения транспорта) машина останавливается (speed = 0)
              - проверить, что в режиме парковки (сначала testDrive, потом park, т.е эмуляция движения транспорта) мотоцикл останавливается (speed = 0)
     */
+
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", "Camry", 2020);
+        Motorcycle motorcycle = new Motorcycle("Yamaha", "Niken", 2021);
+
+        // переопределение метода toString в классах-наследниках достойно восхищения...
+        System.out.println(car);
+        System.out.println(motorcycle);
+
+        car.testDrive();
+        System.out.println("Car speed after test drive: " + car.getSpeed());
+        car.park();
+        System.out.println("Car speed after parking: " + car.getSpeed());
+
+        motorcycle.testDrive();
+        System.out.println("Motorcycle speed after test drive: " + motorcycle.getSpeed());
+        motorcycle.park();
+        System.out.println("Motorcycle speed after parking: " + motorcycle.getSpeed());
+    }
 }
