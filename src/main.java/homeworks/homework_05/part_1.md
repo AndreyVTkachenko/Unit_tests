@@ -2,156 +2,156 @@
 
 **Юнит-тесты**
 
-testAddContactSuccess
+testAddContactSuccess  
 Проверяет успешное добавление нового контакта в список контактов.
 
-testAddContactDuplicate
+testAddContactDuplicate  
 Проверяет, что приложение не позволяет добавлять дублирующиеся контакты с одинаковыми именами и телефонами.
 
-testEditContactSuccess
+testEditContactSuccess  
 Проверяет успешное редактирование существующего контакта.
 
-testEditContactNotFound
+testEditContactNotFound  
 Проверяет поведение при попытке редактирования контакта, который не существует.
 
-testDeleteContactSuccess
+testDeleteContactSuccess  
 Проверяет успешное удаление контакта из списка.
 
-testDeleteContactNotFound
+testDeleteContactNotFound  
 Проверяет поведение при попытке удаления контакта, который не существует.
 
-testGetContactByIdSuccess
+testGetContactByIdSuccess  
 Проверяет успешное получение контакта по его идентификатору.
 
-testGetContactByIdNotFound
+testGetContactByIdNotFound  
 Проверяет поведение при попытке получения контакта, который не существует.
 
-testListAllContactsEmptyList
+testListAllContactsEmptyList  
 Проверяет поведение метода для получения всех контактов, когда список контактов пуст.
 
-testListAllContactsNonEmptyList
+testListAllContactsNonEmptyList  
 Проверяет поведение метода для получения всех контактов, когда список контактов не пуст.
 
-testAddContactEmptyFields
+testAddContactEmptyFields  
 Проверяет, что приложение не позволяет добавлять контакты с пустыми полями (например, пустое имя или телефон).
 
-testAddContactInvalidPhoneNumber
+testAddContactInvalidPhoneNumber  
 Проверяет, что приложение не позволяет добавлять контакты с некорректным форматом номера телефона.
 
-testEditContactEmptyFields
+testEditContactEmptyFields  
 Проверяет, что приложение не позволяет редактировать контакт, оставляя обязательные поля пустыми.
 
-testEditContactInvalidPhoneNumber
+testEditContactInvalidPhoneNumber  
 Проверяет, что приложение не позволяет редактировать контакт с некорректным форматом номера телефона.
 
-testSearchContactByNameSuccess
+testSearchContactByNameSuccess  
 Проверяет успешный поиск контакта по имени.
 
-testSearchContactByNameNotFound
+testSearchContactByNameNotFound  
 Проверяет поведение при попытке поиска контакта по имени, который не существует.
 
-testSearchContactByPhoneNumberSuccess
+testSearchContactByPhoneNumberSuccess  
 Проверяет успешный поиск контакта по номеру телефона.
 
-testSearchContactByPhoneNumberNotFound
+testSearchContactByPhoneNumberNotFound  
 Проверяет поведение при попытке поиска контакта по номеру телефона, который не существует.
 
-testContactEqualsSameContact
+testContactEqualsSameContact  
 Проверяет метод equals, чтобы два одинаковых контакта считались равными.
 
-testContactEqualsDifferentContacts
+testContactEqualsDifferentContacts  
 Проверяет метод equals, чтобы два разных контакта считались неравными.
 
-testContactHashCodeConsistency
+testContactHashCodeConsistency  
 Проверяет метод hashCode для одного и того же контакта, чтобы убедиться, что он возвращает одинаковое значение при каждом вызове.
 
 
 **Интеграционные тесты**
 
-testAddAndRetrieveContact
+testAddAndRetrieveContact  
 Проверяет, что контакт можно добавить и затем успешно получить из базы данных.
 
-testAddAndEditContact
+testAddAndEditContact  
 Проверяет, что контакт можно добавить, затем успешно отредактировать и получить обновленную информацию из базы данных.
 
-testAddAndDeleteContact
+testAddAndDeleteContact  
 Проверяет, что контакт можно добавить и затем успешно удалить из базы данных.
 
-testAddAndListAllContacts
+testAddAndListAllContacts  
 Проверяет, что контакты можно добавлять и затем успешно получать список всех контактов.
 
-testEditAndRetrieveContact
+testEditAndRetrieveContact  
 Проверяет, что после редактирования контакт можно успешно получить из базы данных с обновленными данными.
 
-testLoadContactsFromFile
+testLoadContactsFromFile  
 Проверяет успешную загрузку контактов из файла при запуске приложения.
 
-testSaveContactsToFile
+testSaveContactsToFile  
 Проверяет успешное сохранение контактов в файл при выходе из приложения.
 
-testConcurrentModification
+testConcurrentModification  
 Проверяет, что приложение корректно обрабатывает одновременные изменения списка контактов несколькими пользователями (если такое поддерживается).
 
-testImportContacts
+testImportContacts  
 Проверяет, что контакты можно импортировать из внешнего файла (например, JSON) и они корректно добавляются в существующий список контактов.
 
-testExportContacts
+testExportContacts  
 Проверяет, что контакты можно экспортировать во внешний файл (например, JSON) и они корректно сохраняются.
 
-testBackupAndRestoreContacts
+testBackupAndRestoreContacts  
 Проверяет, что контакты можно создать резервную копию и восстановить из нее без потери данных.
 
 
 **Сквозные тесты**
 
-testUserJourneyAddEditDeleteContact
+testUserJourneyAddEditDeleteContact  
 Проверяет полный путь пользователя: добавление контакта, его редактирование, и удаление через пользовательский интерфейс.
 
-testUserJourneySearchContact
+testUserJourneySearchContact  
 Проверяет, что пользователь может успешно искать контакт по имени или телефону через пользовательский интерфейс.
 
-testUserJourneyEmptyContactList
+testUserJourneyEmptyContactList  
 Проверяет, что пользователь видит правильное сообщение при отсутствии контактов в списке.
 
-testUserJourneyAddMultipleContacts
+testUserJourneyAddMultipleContacts  
 Проверяет, что пользователь может добавить несколько контактов и увидеть их все в списке.
 
-testUserJourneyValidateContactFields
+testUserJourneyValidateContactFields  
 Проверяет, что пользователь не может добавить контакт с пустыми обязательными полями (например, имя или телефон).
 
-testUserJourneyEditContactValidation
+testUserJourneyEditContactValidation  
 Проверяет, что пользователь не может сохранить изменения контакта с некорректными данными (например, пустое имя).
 
-testUserJourneyDeleteNonExistentContact
+testUserJourneyDeleteNonExistentContact  
 Проверяет, что пользователь видит правильное сообщение об ошибке при попытке удаления несуществующего контакта.
 
-testUserJourneyInvalidAddContact
+testUserJourneyInvalidAddContact  
 Проверяет, что пользователь видит корректное сообщение об ошибке при попытке добавить контакт с пустыми или некорректными данными.
 
-testUserJourneyAddAndSearchContact
+testUserJourneyAddAndSearchContact  
 Проверяет, что пользователь может добавить контакт и затем успешно найти его по имени или номеру телефона.
 
-testUserJourneyContactListPagination
+testUserJourneyContactListPagination  
 Проверяет, что пользователь может просматривать контакты постранично, если их количество превышает предел на одной странице.
 
-testUserJourneyUpdateContactListAfterDeletion
+testUserJourneyUpdateContactListAfterDeletion  
 Проверяет, что пользовательский интерфейс обновляется после удаления контакта и контакт исчезает из списка.
 
-testUserJourneyEmptySearchResults
+testUserJourneyEmptySearchResults  
 Проверяет, что пользователь видит корректное сообщение при отсутствии результатов поиска по введенным критериям.
 
-testUserJourneySortContactsByName
+testUserJourneySortContactsByName  
 ОПроверяет, что пользователь может сортировать список контактов по имени.
 
-testUserJourneySortContactsByPhoneNumber
+testUserJourneySortContactsByPhoneNumber  
 Проверяет, что пользователь может сортировать список контактов по номеру телефона.
 
-testUserJourneyViewContactDetails
+testUserJourneyViewContactDetails  
 Проверяет, что пользователь может просмотреть подробности контакта, нажав на контакт в списке.
 
-testUserJourneyInvalidEditContact
+testUserJourneyInvalidEditContact  
 Проверяет, что пользователь видит корректное сообщение об ошибке при попытке редактирования контакта с пустыми или некорректными данными.
 
-testUserJourneyLogoutAndLogin
+testUserJourneyLogoutAndLogin  
 Проверяет, что после выхода из системы и повторного входа все изменения (добавление, редактирование, удаление контактов) сохраняются и корректно отображаются.
 
