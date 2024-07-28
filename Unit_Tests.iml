@@ -57,9 +57,69 @@
     <orderEntry type="library" exported="" name="junit-jupiter-api-5.11.0-M2" level="project" />
     <orderEntry type="library" exported="" name="junit-platform-commons-1.11.0-M2" level="project" />
     <orderEntry type="library" exported="" name="assertj-core-3.26.0" level="project" />
-    <orderEntry type="library" name="objenesis-3.4" level="project" />
-    <orderEntry type="library" name="byte-buddy-1.14.18" level="project" />
-    <orderEntry type="library" name="byte-buddy-agent-1.14.18" level="project" />
-    <orderEntry type="library" name="mockito-core-5.3.1" level="project" />
+    <orderEntry type="library" exported="" name="objenesis-3.4" level="project" />
+    <orderEntry type="library" exported="" name="byte-buddy-1.14.18" level="project" />
+    <orderEntry type="library" exported="" name="byte-buddy-agent-1.14.18" level="project" />
+    <orderEntry type="library" exported="" name="mockito-core-5.3.1" level="project" />
+    <orderEntry type="library" exported="" name="testcontainers-1.20.0" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../testcontainers-1.20.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../objenesis-3.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../mockito-core-5.3.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../byte-buddy-agent-1.14.18.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../byte-buddy-1.14.18.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="Framework Selenium" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../Framework Selenium" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../Framework Selenium" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../Framework Selenium" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../Framework Selenium" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
